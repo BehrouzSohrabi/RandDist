@@ -1,4 +1,5 @@
-# Random with custom distribution
+# Random distribution
+## A random number generator with custom probability distribution
 
 I'm still working on it.<br>
 For now it returns a shuffled list of numbers within a specific range and distribution formula.<br><br>
