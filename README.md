@@ -17,3 +17,6 @@ Formula:<br>
 <br><br>
 Distribution:<br>
 ![myfile](https://raw.githubusercontent.com/BehrouzSohrabi/Random-with-custom-distribution/main/demo/distribution_plot.png)
+<br><br>
+Test with 1K iterations:<br>
+![myfile](https://raw.githubusercontent.com/BehrouzSohrabi/Random-with-custom-distribution/main/demo/distribution_plot_test.png)
