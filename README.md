@@ -7,7 +7,7 @@ For now it returns a shuffled list of numbers within a specific range and distri
 
 min_value = -3<br>
 max_value = 3<br>
-step = 1<br>
+step = 0.5<br>
 formula = lambda x:12-(x**2)<br>
 seeds = 500<br>
 round_to_step = True<br>
