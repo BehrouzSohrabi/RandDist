@@ -13,7 +13,7 @@ seeds = 500
 round_to_step = True
 
 Formula:
-![myfile](https://raw.githubusercontent.com/BehrouzSohrabi/Random-with-custom-distribution/demo/formula_plot.png)
+![myfile](https://raw.githubusercontent.com/BehrouzSohrabi/Random-with-custom-distribution/main/demo/formula_plot.png)
 
 Distribution:
-![myfile](https://raw.githubusercontent.com/BehrouzSohrabi/Random-with-custom-distribution/demo/distribution_plot.png)
+![myfile](https://raw.githubusercontent.com/BehrouzSohrabi/Random-with-custom-distribution/main/demo/distribution_plot.png)
