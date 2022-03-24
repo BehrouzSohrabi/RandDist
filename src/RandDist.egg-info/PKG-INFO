@@ -1,7 +1,24 @@
+Metadata-Version: 2.1
+Name: RandDist
+Version: 0.0.1
+Summary: A random number generator with custom probability distribution
+Home-page: https://github.com/BehrouzSohrabi/RandDist
+Author: Behrouz Sohrabi
+Author-email: sohrabi.beh@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/BehrouzSohrabi/RandDist/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
 # RandDist
 ## python random generator with custom probability distribution
 
-This minimal package generates a list of int or float numbers within a specific range and steps with custom probability distribution.
+This minimal package generates a list of int or float numbers within a specific range and steps with custom probability distribution.<br><br>
 
 ![myfile](https://raw.githubusercontent.com/BehrouzSohrabi/Random-with-custom-distribution/main/demo/distribution_plot_float.png)
 
@@ -21,9 +38,9 @@ numbers_list, sample_number = randdist.randint(0, 10, formula = lambda x:x**2)
 * `randint`: Generates integer numbers
 * `randfloat`: Generates float numbers
 ## Parameters
-* `min_value`: start
-* `max_value`: stop
-* `step`: bin step size `default = 1`
+* `min_value`: min value
+* `max_value`: max value
+* `step`: bin steps `default = 1`
 * `formula`: lambda function for distribution curve `default = lambda x:x`
 * `seeds`: # of generated numbers `default = 1000`
 
@@ -62,3 +79,4 @@ for i in range(10000):
 ```
 
 ![myfile](https://raw.githubusercontent.com/BehrouzSohrabi/Random-with-custom-distribution/main/demo/distribution_plot_test.png)
+

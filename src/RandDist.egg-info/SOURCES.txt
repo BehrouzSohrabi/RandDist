@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/RandDist.egg-info/PKG-INFO
+src/RandDist.egg-info/SOURCES.txt
+src/RandDist.egg-info/dependency_links.txt
+src/RandDist.egg-info/top_level.txt
+src/randdist/__init__.py
+src/randdist/generate.py
+src/randdist/test_randdist.py
