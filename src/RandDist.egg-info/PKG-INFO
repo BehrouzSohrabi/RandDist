@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: RandDist
-Version: 0.0.3
+Version: 0.0.4
 Summary: A random number generator with custom probability distribution
 Home-page: https://github.com/BehrouzSohrabi/RandDist
 Author: Behrouz Sohrabi
