@@ -24,14 +24,22 @@ def _adjust_values(min_value, max_value, step, formula, seeds):
     bin_y.update((x, round((y + upshift) * scaler)) for x, y in bin_y.items())
     return bin_y
 
-def _return_list(rand_list):
+def _return_list(rand_list, sample_size, seeds):
     ''' a private method used in both main methods to return generated list and sample '''
-    sample = random.choice(rand_list)
-    rand_list_shuffled = list(rand_list)
-    random.shuffle(rand_list_shuffled)
-    return rand_list_shuffled, sample
+    if sample_size == 1:
+        sample = random.choice(rand_list)
+        return sample
+    else:
+        rand_list_shuffled = list(rand_list)
+        random.shuffle(rand_list_shuffled)
+        if sample_size != 0:
+            sample_size = min(sample_size, len(rand_list_shuffled))
+        else:
+            sample_size = seeds
+        rand_list_shuffled = rand_list_shuffled[0:sample_size]
+        return rand_list_shuffled
 
-def randint(min_value, max_value, step = 1, formula = lambda x:x, seeds = 1000):
+def randint(min_value, max_value, step = 1, formula = lambda x:x, seeds = 1000, sample_size = 0):
     '''
     This method generates integer numbers
     ----------
@@ -41,8 +49,9 @@ def randint(min_value, max_value, step = 1, formula = lambda x:x, seeds = 1000):
         step: bin step size (default: 1)
         formula: a lambda function for distribution curve (default: lambda x:x)
         seeds: # of generated numbers (default: 1000)
+        sample_size: # of numbers to return. 0 return a list of generated numbers, 1 return only one int or float number, 2 or more returns a list with the specified amount of numbers. sample_size can't be more than seeds. (default: 0)
     Returns:
-        a list of generated numbers
+        a list of generated numbers or
         a sample number
     '''
     # set an extra bin for max_value
@@ -53,9 +62,9 @@ def randint(min_value, max_value, step = 1, formula = lambda x:x, seeds = 1000):
     rand_list = []
     for i in np.arange(min_value, max_value, step):
         rand_list.extend(i for j in range(bin_y[i]))
-    return _return_list(rand_list)
+    return _return_list(rand_list, sample_size, seeds)
 
-def randfloat(min_value, max_value, step = 1, formula = lambda x:x, seeds = 1000):
+def randfloat(min_value, max_value, step = 1, formula = lambda x:x, seeds = 1000, sample_size = 0):
     '''
     This method generates float numbers
     ----------
@@ -66,7 +75,8 @@ def randfloat(min_value, max_value, step = 1, formula = lambda x:x, seeds = 1000
         formula: a lambda function for distribution curve (default: lambda x:x)
         seeds: # of generated numbers (default: 1000)
     Returns:
-        a list of generated numbers
+        sample_size: # of numbers to return. 0 return a list of generated numbers, 1 return only one int or float number, 2 or more returns a list with the specified amount of numbers. sample_size can't be more than seeds. (default: 0)
+        a list of generated numbers or
         a sample number
     '''
     # calculate max numbers for each bin
@@ -77,4 +87,4 @@ def randfloat(min_value, max_value, step = 1, formula = lambda x:x, seeds = 1000
         for j in range(bin_y[i]):
             rand_num = i + random.random() * step
             rand_list.append(rand_num)
-    return _return_list(rand_list)
+    return _return_list(rand_list, sample_size, seeds)

@@ -3,6 +3,9 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=python
 
 ### Python ###
+# note to self
+note_to_self.txt
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

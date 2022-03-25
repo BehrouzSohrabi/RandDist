@@ -26,6 +26,10 @@ numbers_list, sample_number = randdist.randint(0, 10, formula = lambda x:x**2)
 * `step`: bin step size `default = 1`
 * `formula`: lambda function for distribution curve `default = lambda x:x`
 * `seeds`: # of generated numbers `default = 1000`
+* `sample_size`: # of numbers to return `default = 0`
+    - `0`: return a list of generated numbers.
+    - `1`: return only one int or float number
+    - `2 or more`: returns a list with the specified amount of numbers. sample_size can't be more than seeds.
 
 ## Outputs
 
