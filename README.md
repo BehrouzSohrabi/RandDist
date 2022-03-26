@@ -49,7 +49,7 @@ numbers_list, sample_number = randdist.randint(0, 10, formula = lambda x:x**2)
 random_list_int, sample_int = randdist.randint(min_value, max_value, step, formula, seeds)
 
 # generate float numbers
-random_list_float, sample_float = randdist.randfloat(min_value, max_value+step, step, formula, seeds)
+random_list_float, sample_float = randdist.randfloat(min_value, max_value, step, formula, seeds)
 ```
 ![myfile](https://raw.githubusercontent.com/BehrouzSohrabi/Random-with-custom-distribution/main/demo/formula_plot.png)
 ![myfile](https://raw.githubusercontent.com/BehrouzSohrabi/Random-with-custom-distribution/main/demo/distribution_plot_int.png)
