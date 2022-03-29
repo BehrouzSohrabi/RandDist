@@ -4,7 +4,7 @@
 
 This minimal package generates a list of int or float numbers within a specific range and steps with custom probability distribution.
 
-![myfile](https://raw.githubusercontent.com/BehrouzSohrabi/Random-with-custom-distribution/main/demo/distribution_plot_float.png)
+![myfile](https://raw.githubusercontent.com/BehrouzSohrabi/Random-with-custom-distribution/main/demo/animated_plot.gif)
 
 ## How to use
 
